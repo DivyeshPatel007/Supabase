@@ -26,8 +26,6 @@ const AuthProvider = ({ children }) => {
           setUserRole(role);
         }
 
-
-
       } catch (error) {
         console.error("Error getting session:", error);
       } finally {
@@ -72,6 +70,7 @@ const AuthProvider = ({ children }) => {
         isAdmin: userRole === 'admin',
         isTeacher: userRole === 'teacher',
         isStudent: userRole === 'student',
+        setUserRole
         // signIn,
         // signUp,
         // signOut,

@@ -12,6 +12,7 @@ import RoleProtectedRoute from "./RoleProtectedRoute";
 import UserManagement from "../pages/UserManagement";
 import CourseManagement from "../pages/CourseManagment";
 import StudentPortal from "../pages/StudentPortal";
+import AuthCallbackHandler from "../components/auth/AuthCallBackHandler";
 
 
 const AppRoutes = () => {
@@ -22,6 +23,7 @@ const AppRoutes = () => {
       {/* Public routes */}
       <Route path="/login" element={user ? <Navigate to="/" /> : <Login />} />
       <Route path="/register" element={user ? <Navigate to="/" /> : <Register />} />
+      <Route path="/auth/callback" element={<AuthCallbackHandler />} />
       <Route path="/unauthorize" element={<AccessDenied />} />
 
       {/* Protected routes with Layout */}

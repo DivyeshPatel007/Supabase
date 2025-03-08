@@ -1,9 +1,9 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { useAuth } from "../contexts/AuthProvider";
-import { Navigate, useNavigate } from "react-router-dom";
+import { Navigate} from "react-router-dom";
 
 const RoleProtectedRoute = ({ children, roles }) => {
-  const { user, loading, userRole, hasPermission } = useAuth();
+  const { user, loading, hasPermission } = useAuth();
  
   if (loading) {
     return <div>Loading...</div>; // Or a proper loading component
